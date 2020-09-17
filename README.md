@@ -1,6 +1,9 @@
-# minima
+# tgiv014/minima
 
 *Minima is a one-size-fits-all Jekyll theme for writers*. It's Jekyll's default (and first) theme. It's what you get when you run `jekyll new`.
+
+This is a modification to the usual minima theme. One of the main features it adds is dynamic light/dark mode. Based on the browser's response to the prefers-color-scheme media query, it selects one of two stylesheets for the page.
+*This repo is likely to contain ongoing changes to personalize minima for my own use.*
 
 ***Disclaimer:** The information here may vary depending on the version you're using. Please refer to the `README.md` bundled
 within the theme-gem for information specific to your version or by pointing your browser to the Git tag corresponding to your
