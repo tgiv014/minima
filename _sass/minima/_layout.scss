@@ -2,8 +2,6 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $border-color-03;
-  border-bottom: 1px solid $border-color-01;
   min-height: $spacing-unit * 1.865;
   line-height: $base-line-height * $base-font-size * 2.25;
 
@@ -11,10 +9,23 @@
   position: relative;
 }
 
+.stripe-bar {
+  width: 100%;
+  height: 5px;
+  background: repeating-linear-gradient(
+    135deg,
+    $brand-color,
+    $brand-color 5px,
+    #46529800 5px,
+    #46529800 10px
+  );
+}
+
 .site-title {
   @include relative-font-size(1.625);
-  font-weight: 300;
-  letter-spacing: -1px;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 0px;
   margin-bottom: 0;
   float: left;
 
@@ -74,10 +85,12 @@
   }
 
   .page-link {
-    color: $text-color;
+    color: $brand-color;
     line-height: $base-line-height;
     display: block;
     padding: 5px 10px;
+
+    font-weight: 200;
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
@@ -122,8 +135,8 @@
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $border-color-01;
-  padding: $spacing-unit 0;
+  border-top: 1px solid $brand-color;
+  padding: $spacing-unit/3 0;
 }
 
 .footer-heading {
@@ -144,7 +157,7 @@
 .footer-col-wrapper,
 .social-links {
   @include relative-font-size(0.9375);
-  color: $brand-color;
+  color: $text-color;
 }
 
 .footer-col {
@@ -224,12 +237,18 @@
 
 .post-meta {
   font-size: $small-font-size;
-  color: $brand-color;
+  color: $text-color;
+  font-style: italic;
+  font-weight: 200;
 }
 
 .post-link {
   display: block;
   @include relative-font-size(1.5);
+}
+
+.post-link-container {
+  margin-bottom: 0; // Needed to override default behavior on <h3>
 }
 
 
@@ -239,6 +258,18 @@
  */
 .post-header {
   margin-bottom: $spacing-unit;
+}
+
+.post-link {
+  margin-bottom: 5px;
+
+  & {
+    color: $post-link-color;
+  }
+
+  &:visited {
+    color: $post-link-color-visited;
+  }
 }
 
 .post-title,

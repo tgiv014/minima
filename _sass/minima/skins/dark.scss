@@ -1,22 +1,29 @@
 @charset "utf-8";
 
-$brand-color:           #999999 !default;
+$brand-color:           #bdc3c7 !default;
 $brand-color-light:     lighten($brand-color, 5%) !default;
 $brand-color-dark:      darken($brand-color, 35%) !default;
 
-$site-title-color:      $brand-color-light !default;
+$site-title-color:      $brand-color !default;
 
 $text-color:            #bbbbbb !default;
 $background-color:      #181818 !default;
 $code-background-color: #212121 !default;
 
-$link-base-color:       #79b8ff !default;
+$link-base-color:       #2980b9 !default;
 $link-visited-color:    $link-base-color !default;
 $link-hover-color:      $text-color !default;
 
-$border-color-01:       $brand-color-dark !default;
-$border-color-02:       $brand-color-light !default;
-$border-color-03:       $brand-color !default;
+// $border-color-01:       $brand-color-dark !default;
+// $border-color-02:       $brand-color-light !default;
+// $border-color-03:       $brand-color !default;
+
+$border-color-03:       #bbbbbb !default;
+$border-color-01:       darken($border-color-03, 35%) !default;
+$border-color-02:       lighten($border-color-03, 5%) !default;
+
+$post-link-color:         $brand-color;
+$post-link-color-visited: $brand-color-dark;
 
 $table-text-color:      $text-color !default;
 $table-zebra-color:     lighten($background-color, 4%) !default;
