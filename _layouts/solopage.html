@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+      <div class="center-parent">
+        <div class="wrapper">
+        <main class="page-content" aria-label="Content">
+            <article class="post">
+                <div class="post-content">
+                {{ content }}
+                </div>
+            </article>
+        </main>
+        </div>
+    </div>
+  </body>
+</html>

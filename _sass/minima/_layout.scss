@@ -334,7 +334,13 @@
   }
 }
 
-
+.center-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
 /**
  * Pagination navbar
