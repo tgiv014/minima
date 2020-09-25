@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+title_override: All About Title Overrides
 permalink: /about/
 ---
 
