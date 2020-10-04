@@ -21,6 +21,25 @@
   );
 }
 
+.bottom-bar-box {
+  display: flex;
+}
+
+.bottom-bar-logo {
+  float:left;
+  width: 60px;
+  height: 30px;
+  background: $logobar;
+}
+
+.bottom-bar {
+  flex-grow: 1;
+  margin-top:29px;
+  height:1px;
+  width:100%;
+  background-color: $brand-color;
+}
+
 .site-title {
   @include relative-font-size(1.625);
   font-weight: 800;
@@ -135,7 +154,7 @@
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $brand-color;
+  //border-top: 1px solid $brand-color;
   padding: $spacing-unit/3 0;
 }
 

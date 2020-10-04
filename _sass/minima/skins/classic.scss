@@ -26,6 +26,7 @@ $border-color-02:       lighten($border-color-03, 5%) !default;
 $post-link-color:         $brand-color;
 $post-link-color-visited: $brand-color-light;
 
+$logobar:               url("/assets/mntn_thin.svg");
 $table-text-color:      lighten($text-color, 18%) !default;
 $table-zebra-color:     lighten($brand-color, 46%) !default;
 $table-header-bg-color: lighten($brand-color, 43%) !default;
