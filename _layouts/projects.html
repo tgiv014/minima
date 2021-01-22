@@ -12,6 +12,7 @@ layout: default
   {% assign other_projects = site.projects | where:"featured",false %}
   
   {%- if featured_projects.size > 0 -%}
+    <h1>Featured Projects</h1>
     <ul class="post-list">
     {%- for project in featured_projects -%}  
     <li>
@@ -23,6 +24,20 @@ layout: default
       <span class="post-meta">
         {{ project.meta }}
       </span>
+    </li>
+    {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+  {%- if other_projects.size > 0 -%}
+    <hr>
+    <h2>Archived Projects</h2> 
+    <ul>
+    {%- for project in other_projects -%}  
+    <li>
+        <a href="{{ project.url | relative_url }}">
+          {{ project.title | escape }}
+        </a>
     </li>
     {%- endfor -%}
     </ul>
