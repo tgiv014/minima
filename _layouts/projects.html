@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+  {% assign featured_projects = site.projects | where:"featured",true %}
+  {% assign other_projects = site.projects | where:"featured",false %}
+  
+  {%- if featured_projects.size > 0 -%}
+    <ul class="post-list">
+    {%- for project in featured_projects -%}  
+    <li>
+      <h2 class="post-link-container">
+        <a class="post-link" href="{{ project.url | relative_url }}">
+          {{ project.title | escape }}
+        </a>
+      </h2>
+      <span class="post-meta">
+        {{ project.meta }}
+      </span>
+    </li>
+    {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+</div>
