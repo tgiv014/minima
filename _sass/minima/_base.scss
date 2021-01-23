@@ -50,6 +50,7 @@ ul, ol, dl, figure,
 hr {
   margin-top: $spacing-unit;
   margin-bottom: $spacing-unit;
+  color: $border-color-01;
 }
 
 /**
@@ -280,4 +281,14 @@ table {
     -webkit-overflow-scrolling: touch;
             -ms-overflow-style: -ms-autohiding-scrollbar;
   }
+}
+
+.project-box {
+  @extend %clearfix;
+}
+.project-image {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+  float: left;
 }

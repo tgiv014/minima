@@ -4,43 +4,50 @@ layout: default
 
 <div class="home">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+  <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
   {{ content }}
   {% assign featured_projects = site.projects | where:"featured",true %}
   {% assign other_projects = site.projects | where:"featured",false %}
-  
+
   {%- if featured_projects.size > 0 -%}
-    <h1>Featured Projects</h1>
-    <ul class="post-list">
-    {%- for project in featured_projects -%}  
+  <h1>Featured Projects</h1>
+  <ul class="post-list">
+    {%- for project in featured_projects -%}
     <li>
-      <h2 class="post-link-container">
-        <a class="post-link" href="{{ project.url | relative_url }}">
-          {{ project.title | escape }}
+      <div class="project-box">
+        {%- if project.image -%}
+        <a href="{{ project.url | relative_url }}">
+          <img class="project-image" src="{{ project.image | relative_url }}">
         </a>
-      </h2>
-      <span class="post-meta">
-        {{ project.meta }}
-      </span>
+        {%- endif -%}
+        <h2 class="post-link-container">
+          <a class="post-link" href="{{ project.url | relative_url }}">
+            {{ project.title | escape }}
+          </a>
+        </h2>
+        <span class="post-meta">
+          {{ project.meta }}
+        </span>
+      </div>
     </li>
     {%- endfor -%}
-    </ul>
+  </ul>
   {%- endif -%}
 
   {%- if other_projects.size > 0 -%}
-    <hr>
-    <h2>Archived Projects</h2> 
-    <ul>
-    {%- for project in other_projects -%}  
+  <hr>
+  <h2>Archived Projects</h2>
+  <ul>
+    {%- for project in other_projects -%}
     <li>
-        <a href="{{ project.url | relative_url }}">
-          {{ project.title | escape }}
-        </a>
+      <a href="{{ project.url | relative_url }}">
+        {{ project.title | escape }}
+      </a>
     </li>
     {%- endfor -%}
-    </ul>
+  </ul>
   {%- endif -%}
 
 </div>
