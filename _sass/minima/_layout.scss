@@ -363,6 +363,26 @@
 }
 
 /**
+ * Projects (Largely inherited from posts)
+ */
+.project-meta {
+  font-size: $small-font-size;
+  color: $text-color;
+  font-weight: 400;
+}
+
+.project-box {
+  @extend %clearfix;
+}
+
+.project-image {
+  width: 120px;
+  height: 120px;
+  margin-right: 10px;
+  float: left;
+}
+
+/**
  * Pagination navbar
  */
 .pagination {
@@ -386,8 +406,6 @@
     }
   }
 }
-
-
 
 /**
  * Grid helpers

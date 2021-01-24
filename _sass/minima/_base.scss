@@ -283,12 +283,6 @@ table {
   }
 }
 
-.project-box {
-  @extend %clearfix;
-}
-.project-image {
-  width: 150px;
-  height: 150px;
-  margin-right: 20px;
-  float: left;
+.iconify {
+  color: $brand-color;
 }
